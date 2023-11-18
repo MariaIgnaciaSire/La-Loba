@@ -1,0 +1,74 @@
+@font-face {
+    font-family: PoppinsTi­tulo;
+    src: url(/Multimedia/Fonts/poppins/Poppins-Bold.ttf)
+}
+@font-face {
+    font-family: GlacialRegular;
+    src: url(/Multimedia/Fonts/GlacialIndifference-Regular.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*PALETA DE COLORES:
+.color1 { #e8ddcb }; --> cafe claro
+.color2 { #cdb380 }; --> beige
+.color3 { #036564 }; --> petroleo
+.color4 { #033649 }; --> azul
+.color5 { #031634 }; --> azul marino*/
+
+/*---------------------------ESTILO DEL HEADER-------------------------------*/
+header{
+    height: 60px;
+    width: 100%;
+    background-color: #033649;
+}
+.navbar-brand{ /*ESTILO DEL TÍTULO EN EL HEADER*/
+    color: #cdb380 !important;
+    font-family: Poppinstitulo;
+    font-size: 25px;
+}
+#menuButton{
+    color: #cdb380;
+    font-size: 22px;
+}
+span{
+    color: #cdb380;
+}
+.navbar-dark .navbar-nav .nav-link{
+    width: 100%;
+    background-color: #033649;
+    color: #cdb380;
+    text-align: center;
+    font-family: GlacialRegular;
+}
+
+/*----------------------FIN DEL ESTILO DEL HEADER-----------------------*/
+/*----------------------ESTILOS DEL BODY-------------------------------*/
+main{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: auto;
+    overflow: hidden;
+}
+/*-----------------------FIN DEL ESTILO DEL BODY-----------------------*/
+/*----------------------ESTILO DEL FOOTER--------------------------------*/
+footer{
+    height: 90px;
+    width: 100%;
+    background-color: #033649;
+    color: #cdb380;
+    font-family: GlacialRegular;
+    padding-top: 10px;
+    padding-left: 7px;
+    text-align: center;
+}
+footer .IconosRedes a{
+    color: #cdb380;
+    text-decoration: none;
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+/*----------------------FIN DEL ESTILO DEL FOOTER-------------------------*/
