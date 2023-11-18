@@ -1,15 +1,15 @@
 @font-face {
-    font-family: PoppinsTi­tulo;
-    src: url(/Multimedia/Fonts/poppins/Poppins-Bold.ttf)
+    font-family: Poppinstitulo;
+    src: url(/Multimedia/Fonts/poppins/Poppins-Bold.ttf);
 }
 @font-face {
     font-family: GlacialRegular;
     src: url(/Multimedia/Fonts/GlacialIndifference-Regular.otf);
 }
-*{
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
 }
 /*PALETA DE COLORES:
 .color1 { #e8ddcb }; --> cafe claro
@@ -23,6 +23,9 @@ header{
     height: 60px;
     width: 100%;
     background-color: #033649;
+}
+.navbar {
+    z-index: 1000; /* Ajusta el valor según sea necesario */
 }
 .navbar-brand{ /*ESTILO DEL TÍTULO EN EL HEADER*/
     color: #cdb380 !important;
@@ -46,22 +49,97 @@ span{
 
 /*----------------------FIN DEL ESTILO DEL HEADER-----------------------*/
 /*----------------------ESTILOS DEL BODY-------------------------------*/
-main{
-    display: grid;
-    grid-template-rows: 1fr auto;
-    min-height: auto;
+main {
+    flex: 1; /* Hace que el contenido ocupe el espacio restante */
     overflow: hidden;
+    position: relative;
+}
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Usar 100% para cubrir toda la anchura */
+    height: 100%; /* Usar 100% para cubrir toda la altura */
+    object-fit: cover;
+    z-index: -1; /* Colocar el video detrás del contenido */
+}
+.content {
+    position: relative;
+    color: #cdb380;
+    z-index: 1;
+}
+.TextoInicio {
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    background: rgba(3, 54, 73, 0.5);
+    font-family: GlacialRegular;
+    position: relative; /* Añadido para que no haya superposición con la galería */
+    z-index: 2; /* Añadido para asegurar que el texto esté encima del video */
+}
+.boton{
+    background-color: #cdb380;
+    color: #033649;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.boton:hover{
+    background-color: #036564; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    color: #cdb380; /* Cambia el color del texto al pasar el ratón sobre el botón */
 }
 /*-----------------------FIN DEL ESTILO DEL BODY-----------------------*/
+/*-----------------------INICIO ESTILO GALERÍA GRID-------------------*/
+.GaleriaInicio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px;
+    align-items: start;
+}
+
+.GaleriaItem {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.GaleriaItem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.Descripcion {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color:#cdb380;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    text-align: center; /* Centrar el texto */
+    font-size: 18px; /* Ajustar el tamaño de fuente */
+    font-weight: bold; /* Hacer el texto en negrita */
+    text-shadow: 2px 2px 2px #000; /* Agregar sombra al texto */
+}
+
+.GaleriaItem:hover .Descripcion {
+    opacity: 1;
+}
+/*-----------------------FIN ESTILO GALERÍA GRID-------------------*/
 /*----------------------ESTILO DEL FOOTER--------------------------------*/
-footer{
-    height: 90px;
+footer {
     width: 100%;
     background-color: #033649;
     color: #cdb380;
     font-family: GlacialRegular;
-    padding-top: 10px;
-    padding-left: 7px;
+    padding: 10px;
     text-align: center;
 }
 footer .IconosRedes a{
