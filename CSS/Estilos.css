@@ -1,10 +1,10 @@
 @font-face {
     font-family: Poppinstitulo;
-    src: url(/Multimedia/Fonts/poppins/Poppins-Bold.ttf);
+    src: url(./Multimedia/Fonts/poppins/Poppins-Bold.ttf);
 }
 @font-face {
     font-family: GlacialRegular;
-    src: url(/Multimedia/Fonts/GlacialIndifference-Regular.otf);
+    src: url(./Multimedia/Fonts/GlacialIndifference-Regular.otf);
 }
 body, html {
     margin: 0;
