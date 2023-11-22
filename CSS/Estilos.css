@@ -194,6 +194,7 @@ main{
 /*----------------------- INICIO SECCION PANORAMAS---------------*/
 .card {
     background-color: rgba(3, 54, 73, 0.8); 
+    max-height: 600px;
 }
 .card-title{
     color: #cdb380;
